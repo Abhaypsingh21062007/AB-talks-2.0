@@ -3202,12 +3202,35 @@ body { padding-bottom: 72px; }
    PART 5 — DESKTOP RESPONSIVENESS (min-width: 1024px)
    ============================================================ */
 @media (min-width: 1024px) {
+  /* Expand main containers for full screen desktop display */
+  .page-container,
+  .nav-inner,
+  .day-header,
+  .day-intro-hero,
+  .landing-section,
+  .site-footer,
+  .bottom-nav {
+    max-width: 1200px !important;
+  }
+
+  /* Specific grid details for Landing page sections */
+  .tracks-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-4) !important;
+  }
+
+  .testimonials-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-5) !important;
+  }
+
   /* Expand main containers for landscape grid layouts */
   .dashboard-page .page-container,
   .day-page .page-container {
-    max-width: 1040px;
     display: grid !important;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.25fr 0.75fr;
     gap: var(--space-6) var(--space-8) !important;
     align-items: start;
   }
@@ -3270,4 +3293,5 @@ body { padding-bottom: 72px; }
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 
