@@ -34,8 +34,10 @@ export default function Landing() {
       <nav className="nav">
         <div className="nav-inner">
           <Link to="/" className="nav-logo">
-            <span className="nav-logo-mark">AB</span>
-            ABTalks
+            <span className="nav-logo-tag">&lt;</span>
+            <span className="nav-logo-text">AB</span>
+            <span className="nav-logo-tag">/&gt;</span>
+            <span className="nav-logo-brand">Talks</span>
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
             <Link to="/dashboard" className="nav-link">Dashboard</Link>
@@ -58,12 +60,12 @@ export default function Landing() {
 
           <h1 className="hero-headline anim-fade-up delay-1">
             60 days.<br />
-            60 <span className="accent">builds.</span><br />
-            One stronger you.
+            60 <span className="accent">commits.</span><br />
+            Become undeniable.
           </h1>
 
           <p className="hero-sub-hook anim-fade-up delay-2">
-            Stop watching tutorials. Start shipping.
+            Escape tutorial hell. Build real projects.
           </p>
 
           <p className="hero-desc anim-fade-up delay-3">
@@ -104,10 +106,10 @@ export default function Landing() {
 
       {/* ── VALUE PROPS ───────────────────────────── */}
       <section className="landing-section">
-        <div className="section-eyebrow">Why ABTalks</div>
+        <div className="section-eyebrow">// the core difference</div>
         <h2 className="section-title">
-          The fastest path from<br />
-          learner to builder.
+          No certificates.<br />
+          No tutorial hell. Just proof.
         </h2>
 
         <div className="value-grid">
@@ -155,8 +157,8 @@ export default function Landing() {
 
       {/* ── HOW IT WORKS ──────────────────────────── */}
       <section className="landing-section" id="how-it-works">
-        <div className="section-eyebrow">The Process</div>
-        <h2 className="section-title">Simple by design.</h2>
+        <div className="section-eyebrow">// workflow</div>
+        <h2 className="section-title">Commit. Post. Repeat.</h2>
 
         <div className="steps-list">
           {[
@@ -189,8 +191,8 @@ export default function Landing() {
 
       {/* ── TRACKS ────────────────────────────────── */}
       <section className="landing-section">
-        <div className="section-eyebrow">Challenge Tracks</div>
-        <h2 className="section-title">Choose your path.</h2>
+        <div className="section-eyebrow">// tracks</div>
+        <h2 className="section-title">Select your track.</h2>
 
         <div className="tracks-list">
           {TRACKS.map((track, i) => {
@@ -230,15 +232,15 @@ export default function Landing() {
 
       {/* ── PROOF OF WORK EXPLAINER ───────────────── */}
       <section className="landing-section">
-        <div className="section-eyebrow">Daily Proof</div>
-        <h2 className="section-title">Every day, two links.</h2>
+        <div className="section-eyebrow">// proof rules</div>
+        <h2 className="section-title">Proof &gt; Promises.</h2>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
           {[
             {
               Icon: GitBranch,
-              color: '#f1f5f9',
-              bg: 'rgba(241,245,249,0.07)',
+              color: '#0df286',
+              bg: 'rgba(13, 242, 134, 0.08)',
               label: 'GitHub Commit',
               desc: 'A link to your commit or repository showing what you built. Your code history becomes your portfolio.',
             },
@@ -255,7 +257,7 @@ export default function Landing() {
                 style={{
                   width: 44,
                   height: 44,
-                  borderRadius: 'var(--radius-md)',
+                  borderRadius: 'var(--radius-sm)',
                   background: item.bg,
                   display: 'flex',
                   alignItems: 'center',
@@ -283,7 +285,7 @@ export default function Landing() {
           style={{
             marginTop: 'var(--space-5)',
             background: 'var(--success-dim)',
-            borderColor: 'rgba(16,185,129,0.2)',
+            borderColor: 'rgba(13,242,134,0.2)',
             display: 'flex',
             gap: 'var(--space-3)',
             alignItems: 'flex-start',
@@ -300,10 +302,9 @@ export default function Landing() {
 
       {/* ── 60-DAY JOURNEY TIMELINE ───────────────── */}
       <section className="journey-section">
-        <div className="section-eyebrow">The Journey</div>
+        <div className="section-eyebrow">// timeline</div>
         <h2 className="section-title" style={{ marginBottom: 'var(--space-8)' }}>
-          Small builds become<br />
-          big portfolios.
+          Compounding consistency.
         </h2>
 
         <div className="journey-timeline">
@@ -331,9 +332,9 @@ export default function Landing() {
           style={{
             marginTop: 'var(--space-6)',
             padding: 'var(--space-4) var(--space-5)',
-            background: 'linear-gradient(135deg, rgba(16,185,129,0.07) 0%, rgba(99,102,241,0.05) 100%)',
-            border: '1px solid rgba(16,185,129,0.15)',
-            borderRadius: 'var(--radius-lg)',
+            background: 'linear-gradient(135deg, rgba(13,242,134,0.07) 0%, rgba(14,165,233,0.05) 100%)',
+            border: '1px solid rgba(13,242,134,0.15)',
+            borderRadius: 'var(--radius-sm)',
             fontSize: 13,
             color: 'var(--text-muted)',
             lineHeight: 1.7,
@@ -345,9 +346,9 @@ export default function Landing() {
 
       {/* ── TESTIMONIALS ─────────────────────────── */}
       <section className="testimonials-section">
-        <div className="section-eyebrow">Community</div>
+        <div className="section-eyebrow">// community</div>
         <h2 className="section-title" style={{ marginBottom: 'var(--space-6)' }}>
-          What builders say.
+          Real feedback from the field.
         </h2>
 
         <div className="testimonials-list">

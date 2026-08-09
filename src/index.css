@@ -87,6 +87,8 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-main);
+  background-image: radial-gradient(rgba(13, 242, 134, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: var(--text-primary);
   min-height: 100dvh;
   line-height: 1.6;
@@ -159,9 +161,59 @@ input, textarea {
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-5);
+  border-radius: var(--radius-sm);
+  padding: 30px 18px 18px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--dur-base), box-shadow var(--dur-base);
 }
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 10px 0 0 #f59e0b, 20px 0 0 #10b981;
+  opacity: 0.45;
+}
+
+.card:hover {
+  border-color: var(--border-light);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Share terminal-dots styling across all container cards */
+.today-card, .activity-item, .peer-submission, .testimonial-card, .bonus-card, .profile-setup-card, .submission-complete-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm) !important;
+}
+
+.today-card::before, .activity-item::before, .peer-submission::before, .testimonial-card::before, .bonus-card::before, .profile-setup-card::before, .submission-complete-card::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 10px 0 0 #f59e0b, 20px 0 0 #10b981;
+  opacity: 0.45;
+}
+
+.today-card { padding-top: 12px; }
+.activity-item { padding: 24px 16px 16px !important; }
+.peer-submission { padding: 24px 16px 16px !important; }
+.testimonial-card { padding: 28px 20px 20px !important; }
+.bonus-card { padding: 24px 20px 20px !important; }
+.profile-setup-card { padding-top: 12px; }
+.submission-complete-card { padding-top: 12px; }
+
 
 /* ---------- Divider ---------- */
 .divider {
@@ -222,27 +274,43 @@ body::before {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  font-family: var(--font-sans);
   font-weight: 800;
   font-size: 18px;
   letter-spacing: -0.03em;
   color: var(--text-primary);
+  gap: 2px;
 }
 
-.nav-logo-mark {
-  width: 28px;
-  height: 28px;
-  border-radius: var(--radius-sm);
-  background: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 900;
-  color: white;
-  letter-spacing: -0.02em;
-  flex-shrink: 0;
+.nav-logo-tag {
+  font-family: var(--font-mono);
+  color: var(--text-faint);
+  font-weight: 700;
+  font-size: 15px;
+  transition: color var(--dur-base);
 }
+
+.nav-logo-text {
+  font-family: var(--font-mono);
+  color: var(--primary);
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.nav-logo-brand {
+  margin-left: 6px;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  font-size: 19px;
+}
+
+.nav-logo:hover .nav-logo-tag {
+  color: var(--text-muted);
+}
+
 
 .nav-cta {
   display: flex;

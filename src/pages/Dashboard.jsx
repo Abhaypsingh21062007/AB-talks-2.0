@@ -42,8 +42,10 @@ export default function Dashboard() {
       <nav className="nav">
         <div className="nav-inner">
           <Link to="/" className="nav-logo">
-            <span className="nav-logo-mark">AB</span>
-            ABTalks
+            <span className="nav-logo-tag">&lt;</span>
+            <span className="nav-logo-text">AB</span>
+            <span className="nav-logo-tag">/&gt;</span>
+            <span className="nav-logo-brand">Talks</span>
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
             <Bell size={18} style={{ color: 'var(--text-muted)' }} />
@@ -188,7 +190,7 @@ export default function Dashboard() {
         <div className="focus-section-wrapper">
           <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>
             <Moon size={11} style={{ display: 'inline', marginRight: 4 }} />
-            Tonight's Focus
+            // tonight's focus
           </div>
           <div className="focus-card">
             <div className="focus-card-header">
@@ -213,7 +215,7 @@ export default function Dashboard() {
 
         {/* ── TODAY'S CHALLENGE ───────────────────── */}
         <div className="build-section-wrapper">
-          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>Today's Build</div>
+          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>// active challenge</div>
           <div className="today-card">
             {/* Header */}
             <div className="today-card-header">
@@ -322,7 +324,7 @@ export default function Dashboard() {
         <div className="streak-section-wrapper">
           <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>
             <Flame size={11} style={{ display: 'inline', marginRight: 4, color: 'var(--warning)' }} />
-            Current Streak
+            // streak index
           </div>
           <div className="card">
             {/* Big streak number */}
@@ -378,7 +380,7 @@ export default function Dashboard() {
 
         {/* ── CHALLENGE PROGRESS ──────────────────── */}
         <div className="progress-section-wrapper">
-          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>Challenge Progress</div>
+          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>// milestone pipeline</div>
           <div className="card">
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 'var(--space-5)' }}>
               <div>
@@ -411,7 +413,7 @@ export default function Dashboard() {
 
         {/* ── OVERALL STATS ───────────────────────── */}
         <div className="stats-section-wrapper">
-          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>Your Numbers</div>
+          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>// telemetry</div>
           <div className="stats-grid-4">
             {[
               { value: STATS.daysCompleted,    label: 'Days\ncompleted',   color: 'var(--primary)' },
@@ -429,7 +431,7 @@ export default function Dashboard() {
 
         {/* ── STANDING ────────────────────────────── */}
         <div className="standing-section-wrapper">
-          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>Your Standing</div>
+          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>// standing percentile</div>
           <div className="standing-card">
             <div>
               <div className="standing-pct">68%</div>
@@ -452,7 +454,7 @@ export default function Dashboard() {
         <div className="achievements-section-wrapper">
           <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>
             <Trophy size={11} style={{ display: 'inline', marginRight: 4 }} />
-            Achievements
+            // unlocked badges
           </div>
           <div className="achievements-grid">
             {ACHIEVEMENTS.map((a) => (
@@ -474,7 +476,7 @@ export default function Dashboard() {
         {/* ── 60-Day Grid ─────────────────────────── */}
         <div className="grid-section-wrapper">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-3)' }}>
-            <div className="section-eyebrow" style={{ marginBottom: 0 }}>Your Journey</div>
+            <div className="section-eyebrow" style={{ marginBottom: 0 }}>// 60-day grid</div>
             <span className="mono" style={{ fontSize: 11, color: 'var(--text-muted)' }}>Tap a day to view</span>
           </div>
 
@@ -518,7 +520,7 @@ export default function Dashboard() {
 
         {/* ── TRACK OVERVIEW ──────────────────────── */}
         <div className="track-section-wrapper">
-          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>Your Track</div>
+          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>// track configuration</div>
           <div className="card" style={{ borderColor: 'rgba(99,102,241,0.2)', background: 'linear-gradient(135deg, rgba(99,102,241,0.05) 0%, transparent 100%)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)' }}>
               <div style={{ width: 48, height: 48, borderRadius: 'var(--radius-md)', background: 'var(--primary-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', flexShrink: 0 }}>
@@ -537,7 +539,7 @@ export default function Dashboard() {
 
         {/* ── UPCOMING ─────────────────────────────── */}
         <div className="upcoming-section-wrapper">
-          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>Upcoming</div>
+          <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>// queued next</div>
           <Link to={`/day/${TOMORROW_CHALLENGE.day}`} className="upcoming-card">
             <div className="upcoming-day-badge">
               <div className="upcoming-day-num">{TOMORROW_CHALLENGE.day}</div>
@@ -562,7 +564,7 @@ export default function Dashboard() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-3)' }}>
             <div className="section-eyebrow" style={{ marginBottom: 0 }}>
               <Users size={12} style={{ display: 'inline', marginRight: 6 }} />
-              Building Right Now
+              // peer stream
             </div>
             <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>Live</span>
           </div>

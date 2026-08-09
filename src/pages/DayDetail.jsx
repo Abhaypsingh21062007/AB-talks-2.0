@@ -139,8 +139,10 @@ export default function DayDetail() {
       <nav className="nav">
         <div className="nav-inner">
           <Link to="/" className="nav-logo">
-            <span className="nav-logo-mark">AB</span>
-            ABTalks
+            <span className="nav-logo-tag">&lt;</span>
+            <span className="nav-logo-text">AB</span>
+            <span className="nav-logo-tag">/&gt;</span>
+            <span className="nav-logo-brand">Talks</span>
           </Link>
           <span className="mono" style={{ fontSize: 12, color: 'var(--text-muted)' }}>
             {STUDENT.trackShort} Track
@@ -252,7 +254,7 @@ export default function DayDetail() {
           <>
             {/* ── TODAY'S MISSION ──────────────────── */}
             <div className="mission-section-wrapper">
-              <div className="section-eyebrow">Today's Mission</div>
+              <div className="section-eyebrow">// task parameters</div>
               <div className="challenge-prompt" style={{ marginTop: 'var(--space-3)' }}>
                 <div className="challenge-prompt-header">Build this today →</div>
                 <div className="challenge-prompt-body">
@@ -305,7 +307,7 @@ export default function DayDetail() {
 
             {/* ── SUCCESS CRITERIA ─────────────────── */}
             <div className="criteria-section-wrapper">
-              <div className="section-eyebrow">Success Criteria</div>
+              <div className="section-eyebrow">// success checks</div>
               <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 'var(--space-4)', lineHeight: 1.6 }}>
                 Tap each item as you complete it. Your build should check all six.
               </p>
@@ -347,7 +349,7 @@ export default function DayDetail() {
             {/* ── RESOURCES (Day 12) ───────────────── */}
             {day === 12 && (
               <div className="resources-section-wrapper">
-                <div className="section-eyebrow">Resources</div>
+                <div className="section-eyebrow">// reference documentation</div>
                 <div className="resource-list">
                   {DAY_12_FULL.resources.map(res => (
                     <a
@@ -377,8 +379,8 @@ export default function DayDetail() {
                     <Sparkles size={18} />
                   </div>
                   <div>
-                    <div className="bonus-title">Want to push further?</div>
-                    <div className="bonus-subtitle">Optional — only if you've nailed the core build</div>
+                    <div className="bonus-title">// stretch objectives</div>
+                    <div className="bonus-subtitle">Optional — only if you've shipped the core layout</div>
                   </div>
                 </div>
                 <div className="bonus-list">
@@ -433,13 +435,13 @@ export default function DayDetail() {
             {/* ── SUBMISSION SECTION ───────────────── */}
             {!submitted && !isDone ? (
               <div>
-                {/* Header */}
-                <div className="proof-section-header">
+                {/* // proof input */}
+                 <div className="proof-section-header">
                   <div className="section-eyebrow" style={{ marginBottom: 'var(--space-3)' }}>
                     <ShieldCheck size={11} style={{ display: 'inline', marginRight: 6 }} />
-                    Submit Your Proof
+                    // proof transaction
                   </div>
-                  <div className="proof-section-title">Your streak is built on proof, not promises.</div>
+                  <div className="proof-section-title">Proof &gt; Promises.</div>
                   <p className="proof-section-desc">
                     "Paste your GitHub link and your LinkedIn post URL below. Both are required — your daily build only counts when it's public."
                   </p>

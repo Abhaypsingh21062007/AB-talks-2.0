@@ -33,8 +33,10 @@ export default function Profile() {
       <nav className="nav">
         <div className="nav-inner">
           <Link to="/" className="nav-logo">
-            <span className="nav-logo-mark">AB</span>
-            ABTalks
+            <span className="nav-logo-tag">&lt;</span>
+            <span className="nav-logo-text">AB</span>
+            <span className="nav-logo-tag">/&gt;</span>
+            <span className="nav-logo-brand">Talks</span>
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
             <span className="mono" style={{ fontSize: 12, color: 'var(--text-muted)' }}>Profile</span>
